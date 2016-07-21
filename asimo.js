@@ -1,8 +1,12 @@
 // Friends Clicker
 // 这个project不简单的，涉及到使用闭包来实现不同作用域下面的数据传递
+// TODO:
+// 1. img optimized use Grunt or Gulp
+// 2. User Interface Beautify
+// 3.
 // ************Model*************
 var model = {
-  // currentCat是作为一种buffer一样，或者intermediate一样的存在，传递转用物质。
+  // 在整个过程中非常重要。currentCat是作为一种buffer一样，或者intermediate一样的存在，传递转用物质。
   currentCat: null,
   cats: [{
     clickCount: 0,
@@ -65,6 +69,7 @@ var octopus ={
 
 // ************View*************
 var catView = {
+  // Make sure it's just called once
   init: function(){
     this.catElem = document.getElementById("cat");
     this.catNameElem = document.getElementById("cat-name");
