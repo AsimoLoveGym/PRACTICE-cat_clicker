@@ -60,9 +60,13 @@ var catListView = {
       // document.getElementById("cat-count").textContent = cats[i].clickCount;
       // document.getElementById("cat-img").src = cats[i].imgSrc;
       // var catName = cats[i].name;
-      var catNameList = document.createElement('li');
-      catNameList.textContent = cats[i].name;
-      this.catListElem.appendChild(catNameList);
+
+      // 这一步对于闭包很关键，自己还是没有太想明白
+      cat = cats[i];
+      elem = document.createElement('li');
+      // var catNameList = document.createElement('li');
+      elem.textContent = cat.name;
+      this.catListElem.appendChild(elem);
     }
   }
 };
